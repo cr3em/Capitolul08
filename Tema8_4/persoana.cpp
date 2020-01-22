@@ -1,8 +1,9 @@
 #include "persoana.h"
 
-Persoana::Persoana(string prenume, string nume, string materie) : _prenume(prenume), _nume(nume), _materie(materie) {}
+Persoana::Persoana(std::string prenume, std::string nume, std::string materie) : _prenume(prenume), _nume(nume), _materie(materie) {}
 
-string Persoana::Activitate()
+std::string Persoana::Activitate()
 {
-    return " cursul";
+    return " cursul ";
 }
+

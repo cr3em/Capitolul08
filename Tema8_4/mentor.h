@@ -5,15 +5,12 @@
 class Mentor : public Persoana
 {
 public:
-    Mentor(string prenume, string nume, string materie);
-    string GetNumeComplet() {return ("Mentor " + Persoana::GetNumeComplet());}
-    string Activitate();
-    void SchimbaMaterie(string materie);
-    void SchimbaMentor(string prenume, string nume);
+    Mentor(std::string prenume, std::string nume, std::string materie);
+    std::string GetNumeComplet() {return ("Mentor: " + Persoana::GetNumeComplet());}
+    std::string Activitate();
+    void SchimbaMaterie(std::string materie);
+    void SchimbaMentor(std::string prenume, std::string nume);
 private:
-    double _notaTeme;
-    double _notaTeste;
-    double _notaProiect;
 };
 
 #endif // MENTOR_H

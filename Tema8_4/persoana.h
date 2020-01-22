@@ -2,24 +2,22 @@
 #define PERSOANA_H
 #include <iostream>
 
-using namespace std;
-
 class Persoana
 {
 public:
-    Persoana(string prenume, string nume, string materie);
-    string Activitate();
-    string Get_Prenume() {return _prenume;}
-    string Get_Materie() {return _materie;}
+    Persoana(std::string prenume, std::string nume, std::string materie);
+    std::string Activitate();
+    std::string Get_Prenume() {return _prenume;}
+    std::string Get_Materie() {return _materie;}
 protected:
-    string GetNumeComplet() {return (_prenume + _nume);}
-    void SetPrenume(string prenume) {_prenume = prenume;}
-    void SetNume(string nume) {_nume = nume;}
-    void SetMaterie(string materie) {_materie = materie;}
+    std::string GetNumeComplet() {return (_prenume + _nume);}
+    void SetPrenume(std::string prenume) {_prenume = prenume;}
+    void SetNume(std::string nume) {_nume = nume;}
+    void SetMaterie(std::string materie) {_materie = materie;}
 private:
-    string _prenume;
-    string _nume;
-    string _materie;
+    std::string _prenume;
+    std::string _nume;
+    std::string _materie;
 };
 
 #endif // PERSOANA_H

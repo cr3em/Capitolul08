@@ -5,13 +5,13 @@
 class Cursant : public Persoana
 {
 public:
-    Cursant(string prenume, string nume, string materie);
-    string GetNumeComplet() {return ("Cursant " + Persoana::GetNumeComplet());}
-    string Activitate();
-    double SetNotaTeme(double notaTema) {return _notaTeme = notaTema;}
-    double SetNotaTeste(double notaTest) {return _notaTeste = notaTest;}
-    double SetNotaProiect(double notaProiect) {return _notaProiect = notaProiect;}
-    string Absolva();
+    Cursant(std::string prenume, std::string nume, std::string materie);
+    std::string GetNumeComplet() {return ("Cursant: " + Persoana::GetNumeComplet());}
+    std::string Activitate();
+    void SetNotaTeme(double notaTema) {_notaTeme = notaTema;}
+    void SetNotaTeste(double notaTest) {_notaTeste = notaTest;}
+    void SetNotaProiect(double notaProiect) {_notaProiect = notaProiect;}
+    std::string Absolva();
 private:
     double _notaTeme;
     double _notaTeste;

@@ -1,20 +1,20 @@
 #include "cursant.h"
 
-Cursant::Cursant(string prenume, string nume, string materie) : Persoana (prenume, nume, materie)
+Cursant::Cursant(std::string prenume, std::string nume, std::string materie) : Persoana (prenume, nume, materie)
 {
     _notaTeme = 0;
     _notaTeste = 0;
     _notaProiect = 0;
 }
 
-string Cursant::Activitate()
+std::string Cursant::Activitate()
 {
     return " studiaza" + Persoana::Activitate();
 }
 
 bool Cursant::HasGrades()
 {
-    if(_notaTeme != 0 && _notaTeste != 0 && _notaProiect != 0)
+    if(_notaTeme > 0 && _notaTeste > 0 && _notaProiect > 0)
         return true;
     else
         return false;
@@ -22,18 +22,18 @@ bool Cursant::HasGrades()
 
 bool Cursant::IsAverageOk()
 {
-    if((_notaTeme + _notaTeste + _notaProiect) / 3) >= 7)
+    if(((_notaTeme + _notaTeste + _notaProiect) / 3) >= 7)
         return true;
     else
         return false;
 }
 
-string Cursant::Absolva()
+std::string Cursant::Absolva()
 {
     if(HasGrades() == false)
-        cout << " nu are note suficiente";
+        return " nu are note suficiente";
     else if(IsAverageOk() == false)
-        cout << " nu absolva";
-    else if(IsAverageOk() == true)
-        cout << " absolva";
+        return " nu absolva";
+    else
+        return " absolva";
 }
